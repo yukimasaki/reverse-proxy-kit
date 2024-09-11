@@ -1,10 +1,18 @@
 # How to use
-### 1. Clone this repo.
+### Clone this repo.
 ```
 git clone git@github.com:yukimasaki/reverse-proxy-kit.git
 ```
 
-### 2. Clone the app's repo in `./services` directory.
+### Run the `docker-install.sh`.
+If you have not yet installed Docker, run the `docker-install.sh` to install Docker.
+
+```
+sudo chmod a+x docker-install.sh
+./docker-install.sh
+```
+
+### Clone the app's repo in `./services` directory.
 ```
 cd services
 git clone git@github.com:xxxx/yyyy.git
@@ -12,7 +20,7 @@ git clone git@github.com:xxxx/yyyy.git
 
 And run the app to access from Caddy.
 
-### 3. Copy and edit the `.env` file.
+### Copy and edit the `.env` file.
 ```
 cd ../reverse_proxy
 cp .env.example .env
@@ -21,12 +29,12 @@ nano .env
 
 Add your `DOMAIN`, the app's `SERVICE_NAME` and `PORT` to the `.env` file.
 
-### 4. Run the reverse proxy.
+### Run the reverse proxy.
 ```
 docker compose up -d
 ```
 
-### 5. Open `DOMAIN` on your browser.
+### Open `DOMAIN` on your browser.
 ```
 https://{DOMAIN}
 ```
