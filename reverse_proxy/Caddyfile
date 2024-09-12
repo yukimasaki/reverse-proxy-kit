@@ -1,5 +1,5 @@
 {$DOMAIN}:443 {
-  tls
+  tls {$EMAIL}
   encode gzip
   reverse_proxy {$CONTAINER_NAME}:{$PORT} {
     header_up X-Real-IP {remote_host}
