@@ -17,6 +17,7 @@ services:
           - reverse-proxy-container
     environment:
       DOMAIN: ${DOMAIN}
+      EMAIL: ${EMAIL}
       CONTAINER_NAME: ${CONTAINER_NAME}
       PORT: ${PORT}
 
