@@ -1,7 +1,7 @@
-{$CADDY_DOMAIN}:443 {
-  tls {$CADDY_EMAIL}
+{$DOMAIN}:443 {
+  tls {$EMAIL}
   encode gzip
-  reverse_proxy {$CADDY_CONTAINER_NAME}:{$CADDY_PORT} {
+  reverse_proxy {$CONTAINER_NAME}:{$PORT} {
     header_up X-Real-IP {remote_host}
   }
 }
