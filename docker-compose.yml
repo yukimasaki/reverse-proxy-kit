@@ -15,10 +15,10 @@ services:
         aliases:
           - reverse-proxy-container
     environment:
-      DOMAIN: ${DOMAIN}
-      EMAIL: ${EMAIL}
-      CONTAINER_NAME: ${CONTAINER_NAME}
-      PORT: ${PORT}
+      DOMAIN: ${CADDY_DOMAIN}
+      EMAIL: ${CADDY_EMAIL}
+      CONTAINER_NAME: ${CADDY_CONTAINER_NAME}
+      PORT: ${CADDY_PORT}
 
 networks:
   reverse-proxy-network:
